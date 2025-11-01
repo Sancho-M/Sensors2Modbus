@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/ccfsmvw8/image.png" width="256">
+  <img src="https://i.ibb.co/ccfsmvw8/image.png" width="128" height="128>
 </p>
 
  # SensorsToModbus
