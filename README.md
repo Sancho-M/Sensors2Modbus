@@ -1,64 +1,83 @@
-﻿SensorsToModbus
+﻿# SensorsToModbus
 
-A small C# console application that runs in the system tray, collects PC sensor data, and makes it available via the Modbus RTU protocol through a serial (COM) port.
+A small C# console application that runs in the system tray, collects PC sensor data, and exposes it via the Modbus RTU protocol through a serial (COM) port.
 
-Installation & Running
+---
 
-Download the latest release:
-Go to Releases and download the latest version.
+## Installation & Running
 
-Configure the application
+### Download the latest release
+Go to **Releases** and download the latest version.
 
-Run the application once to create config.json
-Right-click the tray icon and select Open Config
-Modify the configuration file to match your setup
+### Configure the application
 
-Application icon will appear in the system tray.
+1. Run the application once to create `config.json`
+2. Right-click the tray icon and select **Open Config**
+3. Modify the configuration file to match your setup
 
-Tray Management
+> The application icon will appear in the system tray.
+
+---
+
+## Tray Management
 
 Right-click the tray icon to access:
 
-Open Config - Opens config.json in default text editor
+- **Open Config** — Opens `config.json` in default text editor  
+- **Reload utility** — Restart the application (applies config changes)  
+- **Show Status** — Displays current connection status and active registers  
+- **Exit** — Graceful application shutdown  
 
-Reload utility - Restart the application. This will apply the configuration changes.
+---
 
-Show Status - Displays current connection status and active registers
+## Building from Source
 
-Exit - Graceful application shutdown
+### Requirements
 
-Building from Source
+- .NET 6.0 SDK or higher  
+- Visual Studio 2022 or VS Code
 
-Development Requirements
-.NET 6.0 SDK or higher
+### Clone and Build
 
-Visual Studio 2022 or VS Code
+```bash
 git clone https://github.com/Sancho-M/Sensors2Modbus
 cd SensorsToModbus
+```
 
-Libralies Used
+---
 
-NModbus - Modbus protocol implementation
-LibreHardwareMonitorLib - Hardware sensor data collection
+## Libraries Used
 
-License
+- **NModbus** — Modbus protocol implementation  
+- **LibreHardwareMonitorLib** — Hardware sensor data collection  
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+---
 
-Third-Party Licenses
+## License
+
+This project is licensed under the **MIT License** — see the `LICENSE` file for details.
+
+---
+
+## Third-Party Licenses
 
 This software uses the following third-party libraries:
-LibreHardwareMonitorLib - Licensed under Mozilla Public License 2.0
-NModbus - Licensed under MIT License
 
+| Library | License |
+|--------|--------|
+| LibreHardwareMonitorLib | Mozilla Public License 2.0 |
+| NModbus | MIT License |
 
-Known Limitations
+---
 
-Windows only
+## Known Limitations
 
-Modbus RTU only (RS485/RS232)
+- Windows only  
+- Modbus RTU only (RS485/RS232)  
+- Administrator privileges recommended for sensor access  
 
-Administrator privileges recommended for sensor access
+---
 
+### ⚠️ Attention
 
-ATTENTION: Restart the application after changing the configuration.
+Restart the application after changing the configuration.
