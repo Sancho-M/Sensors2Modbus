@@ -21,7 +21,19 @@ Go to **Releases** and download the latest version.
 
 > The application icon will appear in the system tray.
 
----
+Typical Configuration Example:
+
+```json
+{
+  "COM_PORT": "COM4",
+  "BOUDRATE": 19200,
+  "REG_0_CPU_TEMPERATURE": true,
+  "REG_1_CPU_LOAD": true,
+  "REG_2_GPU_TEMPERATURE": true,
+  "REG_3_GPU_LOAD": false,
+  "REG_4_RAM_LOAD": true
+}
+```
 
 ## Tray Management
 
