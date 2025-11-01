@@ -19,7 +19,6 @@ internal class SensorsService : ISensorsService, IDisposable
         };
 
     }
-
     public ushort[]? GetValues()
     {
         try

@@ -1,5 +1,4 @@
-﻿
-namespace SensorsManager;
+﻿namespace SensorsManager;
 class SensorsToRegistersWritter
 {
     private readonly ISensorsService _sensors;
@@ -8,14 +7,12 @@ class SensorsToRegistersWritter
 
     private Task? _updaterTask;
     private CancellationTokenSource? _internalCts;
-
     public SensorsToRegistersWritter(ISensorsService sensors, IModbusService modbus, CancellationToken parentToken)
     {
         _sensors = sensors;
         _modbus = modbus;
         _parentToken = parentToken;
     }
-
     public async Task RunAsync()
     {
         await StopAsync();
@@ -24,7 +21,6 @@ class SensorsToRegistersWritter
         _updaterTask = UpdateLoopAsync(_internalCts.Token);
         await Task.Yield();
     }
-
     private async Task UpdateLoopAsync(CancellationToken token)
     {
         while (!token.IsCancellationRequested)
@@ -64,7 +60,6 @@ class SensorsToRegistersWritter
             }
         }
     }
-
     public async Task StopAsync()
     {
         if (_internalCts == null)

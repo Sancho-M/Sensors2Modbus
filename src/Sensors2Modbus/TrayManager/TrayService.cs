@@ -60,7 +60,6 @@ class TrayService : IDisposable
 
         await Task.Yield();
     }
-
     private async Task RestartModbusAsync()
     {
         //ShowNotification("Restart", "In progress...");

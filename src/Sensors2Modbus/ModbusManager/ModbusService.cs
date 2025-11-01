@@ -2,27 +2,23 @@
 using NModbus.Serial;
 using NModbus;
 using System.IO.Ports;
-
-
 class ModbusService : IModbusService
 {
     private Task? _modbusTask;
     private SerialPort? _port;
     private SlaveDataStore _dataStore = new();
     private AppSettings _appSettings = new();
-
-    private CancellationToken _parentToken;
-    private CancellationTokenSource? _internalCts;
-
-    private readonly object _lockObject = new object();
-    private bool _isWorking;
-
     public UInt16 DALAY_BETWEEN_REQUEST { get; set; } = 100;
 
     public event Action<bool, bool>? StatusChanged;
 
+    private readonly object _lockObject = new object();
     public DateTime errorTime { get; set; } = DateTime.MinValue;
 
+    private CancellationToken _parentToken;
+    private CancellationTokenSource? _internalCts;
+
+    private bool _isWorking;
     public bool IsWorking
     {
         get => _isWorking;
@@ -68,9 +64,7 @@ class ModbusService : IModbusService
                 if (IsWorking || errorTime == DateTime.MinValue)
                 {
                     errorTime = DateTime.Now;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"MODBUS ERROR: {ex.Message}. Error date: {DateTime.Now:HH:mm:ss}");
-                    Console.ResetColor();
+                    ChangeModbusStatus(false, $"MODBUS ERROR: {ex.Message}. Error date: {DateTime.Now:HH:mm:ss}");
                 }
 
                 IsWorking = false;
@@ -96,12 +90,10 @@ class ModbusService : IModbusService
         var factory = new ModbusFactory();
         var adapter = new SerialPortAdapter(_port);
         var network = factory.CreateRtuSlaveNetwork(adapter);
-        var slave = factory.CreateSlave(1, _dataStore);
+        var slave = factory.CreateSlave(_appSettings.SLAVE_ID, _dataStore);
         network.AddSlave(slave);
 
-        Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine($"Successfully connected to {_port.PortName}. Connection date: {DateTime.Now:HH:mm:ss}");
-        Console.ResetColor();
+        ChangeModbusStatus(true, $"Successfully connected to {_port.PortName}. Connection date: {DateTime.Now:HH:mm:ss}");
 
         IsWorking = true;
 
@@ -154,5 +146,12 @@ class ModbusService : IModbusService
             _internalCts.Dispose();
             _internalCts = null;
         }
+    }
+
+    private void ChangeModbusStatus(bool status, string message)
+    {
+        _ = status ? Console.ForegroundColor = ConsoleColor.Green : Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine(message);
+        Console.ResetColor();
     }
 }

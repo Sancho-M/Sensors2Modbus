@@ -4,7 +4,7 @@ public class AppSettings
 {
     public string COM_PORT { get; set; } = "COM3";
     public int BOUDRATE { get; set; } = 9600;
-
+    public byte SLAVE_ID { get; set; } = 1;
     public bool REG_0_CPU_TEMPERATURE { get; set; } = false;
     public bool REG_1_CPU_LOAD { get; set; } = false;
     public bool REG_2_GPU_TEMPERATURE { get; set; } = false;
@@ -84,7 +84,6 @@ public class SettingsManager
             return defaultSettings;
         }
     }
-
     private void ChangeConfigStatus(string status)
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
