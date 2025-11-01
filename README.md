@@ -1,5 +1,5 @@
 <p>
-  <img src="https://i.ibb.co/ccfsmvw8/image.png" width="64" height="64" style="vertical-align: middle;">
+  <img src="https://i.ibb.co/ccfsmvw8/image.png" width="64" height="64" style="vertical-align: top;">
   <span style="font-size: 12em; font-weight: bold; vertical-align: top;">Sensors2Modbus</span>
 </p>
 
