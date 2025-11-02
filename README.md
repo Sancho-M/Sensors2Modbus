@@ -97,5 +97,7 @@ This software uses the following third-party libraries:
 
 ### ⚠️ Attention
 
+Please add the .exe file to Windows Defender exclusions. Antivirus programs often flag LibreHardwareMonitorlib.
+
 After making changes to the configuration, 
 click the "reload utility" option in the tray.
