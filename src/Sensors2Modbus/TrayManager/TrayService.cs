@@ -11,6 +11,7 @@ class TrayService : IDisposable
 
     private DateTime _lastNotificationTime = DateTime.MinValue;
     private string message = "Status not received";
+
     public TrayService(ModbusService modbus, SensorsToRegistersWritter linker, SettingsManager settings)
     {
         modbusTray = modbus;
@@ -32,7 +33,7 @@ class TrayService : IDisposable
         trayMenu.Items.Add("Open configuration file", null, (s, e) => _settingsManager.OpenJson());
         trayMenu.Items.Add(new ToolStripSeparator());
         trayMenu.Items.Add("Exit", null, (s, e) => ExitApplication());
- 
+
 
         _trayIcon = new NotifyIcon
         {
@@ -59,6 +60,7 @@ class TrayService : IDisposable
 
         await Task.Yield();
     }
+
     private async Task RestartModbusAsync()
     {
         //ShowNotification("Restart", "In progress...");
@@ -74,7 +76,7 @@ class TrayService : IDisposable
 
     private void OnModbusStatusChanged(bool oldValue, bool newValue)
     {
-        if (oldValue == newValue )
+        if (oldValue == newValue && _firstStatusReceived)
             return;
         _firstStatusReceived = true;
 
