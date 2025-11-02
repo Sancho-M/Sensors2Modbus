@@ -31,7 +31,7 @@ Typical Configuration Example:
   "REG_0_CPU_TEMPERATURE": true,
   "REG_1_CPU_LOAD": true,
   "REG_2_GPU_TEMPERATURE": true,
-  "REG_3_GPU_LOAD": false,
+  "REG_3_GPU_LOAD": true,
   "REG_4_RAM_LOAD": true
 }
 ```
