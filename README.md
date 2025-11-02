@@ -85,6 +85,7 @@ This software uses the following third-party libraries:
 | LibreHardwareMonitorLib | Mozilla Public License 2.0 |
 | NModbus | MIT License |
 
+See the `THIRD-PARTY-NOTICES.txt` file for details.
 ---
 
 ## Known Limitations
