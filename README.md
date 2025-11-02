@@ -78,14 +78,13 @@ This project is licensed under the **MIT License** — see the `LICENSE` file fo
 
 ## Third-Party Licenses
 
-This software uses the following third-party libraries:
+This software uses the following third-party libraries — See the `THIRD-PARTY-NOTICES.txt` file for details.
 
 | Library | License |
 |--------|--------|
 | LibreHardwareMonitorLib | Mozilla Public License 2.0 |
 | NModbus | MIT License |
 
-See the `THIRD-PARTY-NOTICES.txt` file for details.
 ---
 
 ## Known Limitations
