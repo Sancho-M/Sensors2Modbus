@@ -40,9 +40,11 @@ Typical Configuration Example:
 
 Right-click the tray icon to access:
 
-- **Open Config** — Opens `config.json` in default text editor  
-- **Reload utility** — Restart the application (applies config changes)  
 - **Show Status** — Displays current connection status and active registers  
+- **Open console** - Opens the console with logs that show successful and failed connection attempts and their timestamps
+- **Close console** - Hides the console from view
+- **Open Config** — Opens `Sensors2Modbus.json` in default text editor  
+- **Reload utility** — Restart the application (applies config changes)  
 - **Exit** — Graceful application shutdown  
 
 ---
