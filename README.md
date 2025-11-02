@@ -27,6 +27,7 @@ Typical Configuration Example:
 {
   "COM_PORT": "COM4",
   "BOUDRATE": 19200,
+  "SLAVE_ID": 1,
   "REG_0_CPU_TEMPERATURE": true,
   "REG_1_CPU_LOAD": true,
   "REG_2_GPU_TEMPERATURE": true,
