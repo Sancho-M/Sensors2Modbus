@@ -40,7 +40,7 @@ Typical Configuration Example:
 
 Right-click the tray icon to access:
 
-- **Show Status** — Displays current connection status and active registers  
+- **Show Status** — Displays current connection status
 - **Open console** - Opens the console with logs that show successful and failed connection attempts and their timestamps
 - **Close console** - Hides the console from view
 - **Open Config** — Opens `Sensors2Modbus.json` in default text editor  
