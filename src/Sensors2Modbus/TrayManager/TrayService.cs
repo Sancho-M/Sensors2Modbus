@@ -11,7 +11,6 @@ class TrayService : IDisposable
 
     private DateTime _lastNotificationTime = DateTime.MinValue;
     private string message = "Status not received";
-
     public TrayService(ModbusService modbus, SensorsToRegistersWritter linker, SettingsManager settings)
     {
         modbusTray = modbus;
@@ -75,7 +74,7 @@ class TrayService : IDisposable
 
     private void OnModbusStatusChanged(bool oldValue, bool newValue)
     {
-        if (oldValue == newValue && _firstStatusReceived)
+        if (oldValue == newValue )
             return;
         _firstStatusReceived = true;
 
