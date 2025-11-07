@@ -44,7 +44,7 @@ Right-click the tray icon to access:
 - **Hide console** - Hides the console from view
 - **Status** — Displays current connection status
 - **Reload utility** — Restart the application (applies config changes)  
-- **Open Config** — Opens `Sensors2Modbus.json` in default text editor  
+- **Open Config** — Opens `PC_Sensors2Modbus_Сonfig.json` in default text editor  
 - **Exit** — Graceful application shutdown  
 
 ---
