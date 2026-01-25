@@ -47,7 +47,7 @@ Right-click the tray icon to access:
 - **Open Config** — Opens `PC_Sensors2Modbus_Сonfig.json` in default text editor  
 - **Exit** — Graceful application shutdown  
 
-```
+
 
 ### Requirements
 
