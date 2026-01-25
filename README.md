@@ -56,14 +56,6 @@ Right-click the tray icon to access:
 - .NET 6.0 SDK or higher  
 - Visual Studio 2022 or VS Code
 
-### Clone and Build
-
-```bash
-git clone https://github.com/Sancho-M/Sensors2Modbus
-cd Sensors2Modbus
-```
-
----
 
 ## Libraries Used
 
