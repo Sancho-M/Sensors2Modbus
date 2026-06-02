@@ -52,7 +52,6 @@ Right-click the tray icon to access:
 ### Requirements
 
 - .NET 6.0 SDK or higher  
-- Visual Studio 2022 or VS Code
 
 
 ## Libraries Used
