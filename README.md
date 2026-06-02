@@ -1,6 +1,3 @@
-<div align="center">
-  <img src="https://i.ibb.co/ccfsmvw8/image.png" width="80" height="80">
-</div>
 
 ## About
 
