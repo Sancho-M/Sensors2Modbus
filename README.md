@@ -48,7 +48,7 @@ Right-click the tray icon to access:
 
 ### Requirements
 
-- .NET 6.0 SDK or higher  
+- .NET Framework 6.0 or higher  
 
 
 ## Libraries Used
